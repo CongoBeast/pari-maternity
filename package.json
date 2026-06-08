@@ -12,8 +12,10 @@
     "react-scripts": "5.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build"
+    "start": "CI=false react-scripts start",
+    "build": "CI=false react-scripts build",
+    "test": "CI=false react-scripts test",
+    "eject": "CI=false react-scripts eject"
   },
   "browserslist": {
     "production": [
