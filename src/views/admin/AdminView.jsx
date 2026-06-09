@@ -6,9 +6,14 @@ import StaffManagementPage from './StaffManagementPage';
 import FacilityManagementPage from './FacilityManagementPage';
 import FaultReportsPage from './FaultReportsPage';
 import AttendanceManagementPage from './AttendanceManagementPage';
+import WardOccupancyPage from './WardOccupancyPage';
+import BirthRecordsDashboard from '../birthrecords/BirthRecordsDashboard';
+import InventoryManagementPage from './InventoryManagementPage';
+
 
 export default function AdminView({ user, onLogout }) {
   const [page, setPage] = useState('dashboard');
+  const onNavigate = (key) => setPage(key);
 
   const handleNav = (key) => {
     if (key === '__logout__') return onLogout();
@@ -26,13 +31,13 @@ export default function AdminView({ user, onLogout }) {
       case 'patients':
         return <PlaceholderPage title="Patient Records" icon="FolderOpen" />;
       case 'ward':
-        return <PlaceholderPage title="Ward Management" icon="BedDouble" />;
+        return <WardOccupancyPage title="Ward Management" icon="BedDouble" />;
       case 'inventory':
-        return <PlaceholderPage title="Inventory Management" icon="Package" />;
+        return <InventoryManagementPage title="Inventory Management" icon="Package" />;
       case 'fault':
         return <FaultReportsPage title="Fault Reports" icon="AlertTriangle" />;
       case 'birth':
-        return <PlaceholderPage title="Birth Records" icon="Baby" />;
+        return <BirthRecordsDashboard title="Birth Records" icon="Baby" />;
       case 'attendance':
         return <AttendanceManagementPage title="Attendance Records" icon="ClipboardList" />;
       case 'myinfo':
