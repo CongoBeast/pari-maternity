@@ -3,6 +3,9 @@ import AppShell from '../../components/AppShell';
 import PlaceholderPage from '../../components/PlaceholderPage';
 import AdminDashboard from './AdminDashboard';
 import StaffManagementPage from './StaffManagementPage';
+import FacilityManagementPage from './FacilityManagementPage';
+import FaultReportsPage from './FaultReportsPage';
+import AttendanceManagementPage from './AttendanceManagementPage';
 
 export default function AdminView({ user, onLogout }) {
   const [page, setPage] = useState('dashboard');
@@ -19,7 +22,7 @@ export default function AdminView({ user, onLogout }) {
       case 'staff':
         return <StaffManagementPage title="Staff Management" icon="UserCog" />;
       case 'management':
-        return <PlaceholderPage title="Management" icon="Building2" />;
+        return <FacilityManagementPage title="Management" icon="Building2" />;
       case 'patients':
         return <PlaceholderPage title="Patient Records" icon="FolderOpen" />;
       case 'ward':
@@ -27,11 +30,11 @@ export default function AdminView({ user, onLogout }) {
       case 'inventory':
         return <PlaceholderPage title="Inventory Management" icon="Package" />;
       case 'fault':
-        return <PlaceholderPage title="Fault Reports" icon="AlertTriangle" />;
+        return <FaultReportsPage title="Fault Reports" icon="AlertTriangle" />;
       case 'birth':
         return <PlaceholderPage title="Birth Records" icon="Baby" />;
       case 'attendance':
-        return <PlaceholderPage title="Attendance Records" icon="ClipboardList" />;
+        return <AttendanceManagementPage title="Attendance Records" icon="ClipboardList" />;
       case 'myinfo':
         return <PlaceholderPage title="My Information" icon="UserCircle" />;
       case 'help':
