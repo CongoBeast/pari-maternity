@@ -9,6 +9,7 @@ import AttendanceManagementPage from './AttendanceManagementPage';
 import WardOccupancyPage from './WardOccupancyPage';
 import BirthRecordsDashboard from '../birthrecords/BirthRecordsDashboard';
 import InventoryManagementPage from './InventoryManagementPage';
+import PatientRecordsPage from './PatientRecordsPage';
 
 
 export default function AdminView({ user, onLogout }) {
@@ -29,7 +30,7 @@ export default function AdminView({ user, onLogout }) {
       case 'management':
         return <FacilityManagementPage title="Management" icon="Building2" />;
       case 'patients':
-        return <PlaceholderPage title="Patient Records" icon="FolderOpen" />;
+        return <PatientRecordsPage title="Patient Records" icon="FolderOpen" />;
       case 'ward':
         return <WardOccupancyPage title="Ward Management" icon="BedDouble" />;
       case 'inventory':
@@ -37,7 +38,7 @@ export default function AdminView({ user, onLogout }) {
       case 'fault':
         return <FaultReportsPage title="Fault Reports" icon="AlertTriangle" />;
       case 'birth':
-        return <BirthRecordsDashboard title="Birth Records" icon="Baby" />;
+        return <BirthRecordsDashboard title="Birth Records" icon="Baby" onNavigate={setPage} />;
       case 'attendance':
         return <AttendanceManagementPage title="Attendance Records" icon="ClipboardList" />;
       case 'myinfo':
