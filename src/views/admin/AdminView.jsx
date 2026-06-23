@@ -12,6 +12,8 @@ import InventoryManagementPage from './InventoryManagementPage';
 import PatientRecordsPage from './PatientRecordsPage';
 import DispensaryManagementPage from './DispensaryManagementPage';
 import BloodBankPage from './BloodBankPage';
+import SuppliersPage from './SuppliersPage';
+import InsuranceClaimsPage from './InsuranceClaimsPage';
 
 
 export default function AdminView({ user, onLogout }) {
@@ -45,6 +47,10 @@ export default function AdminView({ user, onLogout }) {
         return <FaultReportsPage title="Fault Reports" icon="AlertTriangle" />;
       case 'birth':
         return <BirthRecordsDashboard title="Birth Records" icon="Baby" onNavigate={setPage} />;
+      case 'suppliers':
+        return <SuppliersPage title="Manage Suppliers" icon="Van"/>;
+      case 'insurance':
+        return <InsuranceClaimsPage title="Insurance Management" icon="WalletCards"/>;
       case 'attendance':
         return <AttendanceManagementPage title="Attendance Records" icon="ClipboardList" />;
       case 'myinfo':
