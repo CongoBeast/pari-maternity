@@ -12,20 +12,20 @@ const occupancy = [
 ];
 
 const maintenance = [
-  { title: 'AC Unit – Delivery Wing B', sub: 'Reported 2h ago by Nurse Sarah' },
+  { title: 'AC Unit – Delivery Wing B', sub: 'Reported 2h ago by Nurse Charamba' },
   { title: 'Emergency Lighting Test',   sub: 'Scheduled for 14:00 PM' },
 ];
 
 const staffNotices = [
   { title: 'New Pediatric Protocols',  sub: 'Effective from next Monday' },
-  { title: 'Employee of the Month',    sub: 'Dr. Elena Fisher – Neonatology' },
+  { title: 'Employee of the Month',    sub: 'Dr. Elena Gandawa – Neonatology' },
 ];
 
 const floor = [
-  { floor: '1F', label: 'Delivery & Emergency', person: 'Dr. Linda Chen',     role: 'Lead Surgeon' },
-  { floor: '2F', label: 'Neonatal Care (NICU)',  person: 'Dr. James Wilson',   role: 'Neonatologist' },
-  { floor: '3F', label: 'Post-Natal Wards',      person: 'Head Nurse Marcus',  role: 'Ward Manager' },
-  { floor: '4F', label: 'Admin & Pharmacy',      person: 'Sarah Jenkins',      role: 'Ops Director' },
+  { floor: '1F', label: 'Delivery & Emergency', person: 'Dr. Makomborero Msipa',     role: 'Lead Surgeon' },
+  { floor: '2F', label: 'Neonatal Care (NICU)',  person: 'Dr. James Mugaga',   role: 'Neonatologist' },
+  { floor: '3F', label: 'Post-Natal Wards',      person: 'Head Nurse Sibanda',  role: 'Ward Manager' },
+  { floor: '4F', label: 'Admin & Pharmacy',      person: 'Sarah Matiwaza',      role: 'Ops Director' },
 ];
 
 export default function AdminDashboard({ onNavigate }) {

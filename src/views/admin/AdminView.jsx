@@ -10,6 +10,8 @@ import WardOccupancyPage from './WardOccupancyPage';
 import BirthRecordsDashboard from '../birthrecords/BirthRecordsDashboard';
 import InventoryManagementPage from './InventoryManagementPage';
 import PatientRecordsPage from './PatientRecordsPage';
+import DispensaryManagementPage from './DispensaryManagementPage';
+import BloodBankPage from './BloodBankPage';
 
 
 export default function AdminView({ user, onLogout }) {
@@ -33,8 +35,12 @@ export default function AdminView({ user, onLogout }) {
         return <PatientRecordsPage title="Patient Records" icon="FolderOpen" />;
       case 'ward':
         return <WardOccupancyPage title="Ward Management" icon="BedDouble" />;
+      case 'dispensary':
+        return <DispensaryManagementPage title="Dispensary Management" icon="BedDouble" />;
       case 'inventory':
         return <InventoryManagementPage title="Inventory Management" icon="Package" />;
+      case 'blood':
+        return <BloodBankPage title="Blood Bank Management" icon="Droplet" />;
       case 'fault':
         return <FaultReportsPage title="Fault Reports" icon="AlertTriangle" />;
       case 'birth':
