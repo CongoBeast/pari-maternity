@@ -8,13 +8,13 @@ import {
 // ─── Mock Data ────────────────────────────────────────────────────────────────
 
 const PATIENT_DIRECTORY = [
-  { id: 'P-1042', name: 'Elena Gilbert',   age: 29, ward: 'Antenatal Ward A', weeks: 36, condition: 'Gestational Hypertension' },
-  { id: 'P-1055', name: 'Serena Williams', age: 34, ward: 'Delivery Suite',   weeks: 40, condition: 'Term Labour' },
-  { id: 'P-1067', name: 'Nora West-Allen', age: 27, ward: 'Postnatal Ward B', weeks: 38, condition: 'Post C-Section' },
-  { id: 'P-1089', name: 'Wanda Maximoff',  age: 31, ward: 'Antenatal Ward B', weeks: 22, condition: 'Cervical Incompetence' },
-  { id: 'P-1103', name: 'Diana Prince',    age: 33, ward: 'Antenatal Ward A', weeks: 28, condition: 'GDM' },
-  { id: 'P-1118', name: 'Natasha Romanoff',age: 30, ward: 'Postnatal Ward A', weeks: 39, condition: 'Normal Delivery' },
-  { id: 'P-1134', name: 'Carol Danvers',   age: 36, ward: 'High Risk Unit',   weeks: 32, condition: 'Preeclampsia' },
+  { id: 'P-1042', name: 'Tendai Moyo',        age: 29, ward: 'Antenatal Ward A', weeks: 36, condition: 'Gestational Hypertension' },
+  { id: 'P-1055', name: 'Chipo Zvobgo',       age: 34, ward: 'Delivery Suite',   weeks: 40, condition: 'Term Labour' },
+  { id: 'P-1067', name: 'Rudo Mafuka',        age: 27, ward: 'Postnatal Ward B', weeks: 38, condition: 'Post C-Section' },
+  { id: 'P-1089', name: 'Tariro Gumbo',       age: 31, ward: 'Antenatal Ward B', weeks: 22, condition: 'Cervical Incompetence' },
+  { id: 'P-1103', name: 'Rutendo Sibanda',    age: 33, ward: 'Antenatal Ward A', weeks: 28, condition: 'GDM' },
+  { id: 'P-1118', name: 'Nyasha Mhondoro',    age: 30, ward: 'Postnatal Ward A', weeks: 39, condition: 'Normal Delivery' },
+  { id: 'P-1134', name: 'Kudzai Murefu',      age: 36, ward: 'High Risk Unit',   weeks: 32, condition: 'Preeclampsia' },
 ];
 
 const MEDICINE_CATALOGUE = [

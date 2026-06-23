@@ -6,14 +6,14 @@ import {
 
 // Sample lab test data
 const labTests = [
-  { id: 'LT001', patient: 'Elena Gilbert',      test: 'Full Blood Count', orderDate: 'Oct 20', dueDate: 'Oct 24', status: 'completed', result: 'Normal', priority: 'routine' },
-  { id: 'LT002', patient: 'Serena Williams',    test: 'Glucose Tolerance Test', orderDate: 'Oct 21', dueDate: 'Oct 25', status: 'pending', result: '—', priority: 'urgent' },
-  { id: 'LT003', patient: 'Nora West-Allen',    test: 'Liver Function Tests', orderDate: 'Oct 18', dueDate: 'Oct 23', status: 'delayed', result: '—', priority: 'routine' },
-  { id: 'LT004', patient: 'Wanda Maximoff',     test: 'Kidney Function Panel', orderDate: 'Oct 22', dueDate: 'Oct 26', status: 'completed', result: 'Normal', priority: 'routine' },
-  { id: 'LT005', patient: 'Elena Gilbert',      test: 'Thyroid Function (TSH)', orderDate: 'Oct 22', dueDate: 'Oct 27', status: 'in_progress', result: '—', priority: 'routine' },
-  { id: 'LT006', patient: 'Serena Williams',    test: 'HIV Screening', orderDate: 'Oct 21', dueDate: 'Oct 24', status: 'completed', result: 'Negative', priority: 'urgent' },
-  { id: 'LT007', patient: 'Nora West-Allen',    test: 'Syphilis RPR Test', orderDate: 'Oct 20', dueDate: 'Oct 23', status: 'completed', result: 'Negative', priority: 'routine' },
-  { id: 'LT008', patient: 'Wanda Maximoff',     test: 'Blood Group & Type', orderDate: 'Oct 22', dueDate: 'Oct 24', status: 'pending', result: '—', priority: 'routine' },
+  { id: 'LT001', patient: 'Tendai Moyo',        test: 'Full Blood Count', orderDate: 'Oct 20', dueDate: 'Oct 24', status: 'completed', result: 'Normal', priority: 'routine' },
+  { id: 'LT002', patient: 'Chipo Zvobgo',       test: 'Glucose Tolerance Test', orderDate: 'Oct 21', dueDate: 'Oct 25', status: 'pending', result: '—', priority: 'urgent' },
+  { id: 'LT003', patient: 'Rudo Mafuka',        test: 'Liver Function Tests', orderDate: 'Oct 18', dueDate: 'Oct 23', status: 'delayed', result: '—', priority: 'routine' },
+  { id: 'LT004', patient: 'Tariro Gumbo',       test: 'Kidney Function Panel', orderDate: 'Oct 22', dueDate: 'Oct 26', status: 'completed', result: 'Normal', priority: 'routine' },
+  { id: 'LT005', patient: 'Tendai Moyo',        test: 'Thyroid Function (TSH)', orderDate: 'Oct 22', dueDate: 'Oct 27', status: 'in_progress', result: '—', priority: 'routine' },
+  { id: 'LT006', patient: 'Chipo Zvobgo',       test: 'HIV Screening', orderDate: 'Oct 21', dueDate: 'Oct 24', status: 'completed', result: 'Negative', priority: 'urgent' },
+  { id: 'LT007', patient: 'Rudo Mafuka',        test: 'Syphilis RPR Test', orderDate: 'Oct 20', dueDate: 'Oct 23', status: 'completed', result: 'Negative', priority: 'routine' },
+  { id: 'LT008', patient: 'Tariro Gumbo',       test: 'Blood Group & Type', orderDate: 'Oct 22', dueDate: 'Oct 24', status: 'pending', result: '—', priority: 'routine' },
 ];
 
 const labNotices = [

@@ -13,30 +13,30 @@ import {
 
 /* ---------------------------- mock data --------------------------- */
 const initialSchedule = [
-  { time: '08:30 AM', patientId: 'MAT-1042', patient: 'Elena Gilbert',   proc: 'C-Section (Planned)', theatre: 'Theatre 1', team: ['Dr. Sarah Chen', 'Dr. Raj Patel', 'N. Owens', 'N. Bello'], status: 'inprogress', emergency: false },
-  { time: '10:15 AM', patientId: 'MAT-0916', patient: 'Maya Hansen',     proc: 'Uterine Rupture Repair', theatre: 'Theatre 2', team: ['Dr. Adaeze Eze', 'Dr. Tom Hardy', 'N. Quinn'], status: 'emergency', emergency: true },
-  { time: '11:00 AM', patientId: 'MAT-1098', patient: 'Serena Williams', proc: 'Induction',           theatre: 'Room 105',  team: ['Dr. Raj Patel', 'N. Owens'], status: 'pending', emergency: false },
-  { time: '01:30 PM', patientId: 'MAT-1130', patient: 'Nora West-Allen', proc: 'Post-partum Exam',    theatre: 'Theatre 3', team: ['Dr. Sarah Chen', 'N. Bello'], status: 'confirmed', emergency: false },
-  { time: '04:45 PM', patientId: 'MAT-1187', patient: 'Wanda Maximoff',  proc: 'Cerclage Procedure',  theatre: 'Theatre 1', team: ['Dr. Adaeze Eze', 'Dr. Raj Patel', 'N. Quinn', 'N. Owens', 'N. Bello'], status: 'preop', emergency: false },
+  { time: '08:30 AM', patientId: 'MAT-1042', patient: 'Tendai Moyo',     proc: 'C-Section (Planned)', theatre: 'Theatre 1', team: ['Dr. Tafadzwa Makoni', 'Dr. Kudzai Ncube', 'N. Chikomo', 'N. Dube'], status: 'inprogress', emergency: false },
+  { time: '10:15 AM', patientId: 'MAT-0916', patient: 'Rutendo Sibanda', proc: 'Uterine Rupture Repair', theatre: 'Theatre 2', team: ['Dr. Chiedza Mhlanga', 'Dr. Tinashe Mupfumira', 'N. Khumalo'], status: 'emergency', emergency: true },
+  { time: '11:00 AM', patientId: 'MAT-1098', patient: 'Chipo Zvobgo',    proc: 'Induction',           theatre: 'Room 105',  team: ['Dr. Kudzai Ncube', 'N. Chikomo'], status: 'pending', emergency: false },
+  { time: '01:30 PM', patientId: 'MAT-1130', patient: 'Rudo Mafuka',     proc: 'Post-partum Exam',    theatre: 'Theatre 3', team: ['Dr. Tafadzwa Makoni', 'N. Dube'], status: 'confirmed', emergency: false },
+  { time: '04:45 PM', patientId: 'MAT-1187', patient: 'Tariro Gumbo',    proc: 'Cerclage Procedure',  theatre: 'Theatre 1', team: ['Dr. Chiedza Mhlanga', 'Dr. Kudzai Ncube', 'N. Khumalo', 'N. Chikomo', 'N. Dube'], status: 'preop', emergency: false },
 ];
 
 const recentOps = [
-  { date: 'Oct 23', patientId: 'MAT-0991', proc: 'C-Section (Planned)', theatre: 'Theatre 1', surgeon: 'Dr. Sarah Chen',  duration: '52 min', outcome: 'Successful' },
-  { date: 'Oct 23', patientId: 'MAT-0987', proc: 'D&C',                 theatre: 'Theatre 2', surgeon: 'Dr. Raj Patel',   duration: '38 min', outcome: 'Successful' },
-  { date: 'Oct 22', patientId: 'MAT-0974', proc: 'Emergency C-Section', theatre: 'Theatre 1', surgeon: 'Dr. Adaeze Eze',  duration: '47 min', outcome: 'Successful' },
-  { date: 'Oct 22', patientId: 'MAT-0969', proc: 'Myomectomy',          theatre: 'Theatre 3', surgeon: 'Dr. Sarah Chen',  duration: '1h 24m', outcome: 'Complication' },
-  { date: 'Oct 21', patientId: 'MAT-0958', proc: 'Cerclage Procedure',  theatre: 'Theatre 2', surgeon: 'Dr. Raj Patel',   duration: '41 min', outcome: 'Successful' },
+  { date: 'Oct 23', patientId: 'MAT-0991', proc: 'C-Section (Planned)', theatre: 'Theatre 1', surgeon: 'Dr. Tafadzwa Makoni',  duration: '52 min', outcome: 'Successful' },
+  { date: 'Oct 23', patientId: 'MAT-0987', proc: 'D&C',                 theatre: 'Theatre 2', surgeon: 'Dr. Kudzai Ncube',   duration: '38 min', outcome: 'Successful' },
+  { date: 'Oct 22', patientId: 'MAT-0974', proc: 'Emergency C-Section', theatre: 'Theatre 1', surgeon: 'Dr. Chiedza Mhlanga',  duration: '47 min', outcome: 'Successful' },
+  { date: 'Oct 22', patientId: 'MAT-0969', proc: 'Myomectomy',          theatre: 'Theatre 3', surgeon: 'Dr. Tafadzwa Makoni',  duration: '1h 24m', outcome: 'Complication' },
+  { date: 'Oct 21', patientId: 'MAT-0958', proc: 'Cerclage Procedure',  theatre: 'Theatre 2', surgeon: 'Dr. Kudzai Ncube',   duration: '41 min', outcome: 'Successful' },
 ];
 
 const fullHistory = [
   ...recentOps,
-  { date: 'Oct 21', patientId: 'MAT-0951', proc: 'Induction',          theatre: 'Room 105',  surgeon: 'Dr. Adaeze Eze', duration: '2h 10m', outcome: 'Successful' },
-  { date: 'Oct 20', patientId: 'MAT-0944', proc: 'C-Section (Planned)',theatre: 'Theatre 1', surgeon: 'Dr. Sarah Chen', duration: '55 min', outcome: 'Successful' },
-  { date: 'Oct 20', patientId: 'MAT-0938', proc: 'Emergency C-Section',theatre: 'Theatre 2', surgeon: 'Dr. Raj Patel',  duration: '44 min', outcome: 'Successful' },
-  { date: 'Oct 19', patientId: 'MAT-0929', proc: 'D&C',                theatre: 'Theatre 3', surgeon: 'Dr. Adaeze Eze', duration: '36 min', outcome: 'Successful' },
-  { date: 'Oct 19', patientId: 'MAT-0921', proc: 'Post-partum Exam',   theatre: 'Theatre 1', surgeon: 'Dr. Sarah Chen', duration: '22 min', outcome: 'Successful' },
-  { date: 'Oct 18', patientId: 'MAT-0914', proc: 'Cerclage Procedure', theatre: 'Theatre 2', surgeon: 'Dr. Raj Patel',  duration: '49 min', outcome: 'Complication' },
-  { date: 'Oct 18', patientId: 'MAT-0908', proc: 'Myomectomy',         theatre: 'Theatre 3', surgeon: 'Dr. Adaeze Eze', duration: '1h 31m', outcome: 'Successful' },
+  { date: 'Oct 21', patientId: 'MAT-0951', proc: 'Induction',          theatre: 'Room 105',  surgeon: 'Dr. Chiedza Mhlanga', duration: '2h 10m', outcome: 'Successful' },
+  { date: 'Oct 20', patientId: 'MAT-0944', proc: 'C-Section (Planned)',theatre: 'Theatre 1', surgeon: 'Dr. Tafadzwa Makoni', duration: '55 min', outcome: 'Successful' },
+  { date: 'Oct 20', patientId: 'MAT-0938', proc: 'Emergency C-Section',theatre: 'Theatre 2', surgeon: 'Dr. Kudzai Ncube',  duration: '44 min', outcome: 'Successful' },
+  { date: 'Oct 19', patientId: 'MAT-0929', proc: 'D&C',                theatre: 'Theatre 3', surgeon: 'Dr. Chiedza Mhlanga', duration: '36 min', outcome: 'Successful' },
+  { date: 'Oct 19', patientId: 'MAT-0921', proc: 'Post-partum Exam',   theatre: 'Theatre 1', surgeon: 'Dr. Tafadzwa Makoni', duration: '22 min', outcome: 'Successful' },
+  { date: 'Oct 18', patientId: 'MAT-0914', proc: 'Cerclage Procedure', theatre: 'Theatre 2', surgeon: 'Dr. Kudzai Ncube',  duration: '49 min', outcome: 'Complication' },
+  { date: 'Oct 18', patientId: 'MAT-0908', proc: 'Myomectomy',         theatre: 'Theatre 3', surgeon: 'Dr. Chiedza Mhlanga', duration: '1h 31m', outcome: 'Successful' },
 ];
 
 const orNotices = [

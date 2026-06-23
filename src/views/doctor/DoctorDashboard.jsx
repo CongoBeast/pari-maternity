@@ -4,10 +4,10 @@ import {
 } from 'lucide-react';
 
 const theatre = [
-  { time: '08:30 AM', patient: 'Elena Gilbert',    proc: 'C-Section (Planned)',  room: 'Room 402',   status: 'confirmed' },
-  { time: '11:00 AM', patient: 'Serena Williams',  proc: 'Induction',            room: 'Room 105',   status: 'pending' },
-  { time: '02:15 PM', patient: 'Nora West-Allen',  proc: 'Post-partum Exam',     room: 'Theatre 2',  status: 'scheduled' },
-  { time: '04:45 PM', patient: 'Wanda Maximoff',   proc: 'Cerclage Procedure',   room: 'Theatre 1',  status: 'preop' },
+  { time: '08:30 AM', patient: 'Musa Tshuma',    proc: 'C-Section (Planned)',  room: 'Room 402',   status: 'confirmed' },
+  { time: '11:00 AM', patient: 'Sarah Moyo',  proc: 'Induction',            room: 'Room 105',   status: 'pending' },
+  { time: '02:15 PM', patient: 'Nora Ncube',  proc: 'Post-partum Exam',     room: 'Theatre 2',  status: 'scheduled' },
+  { time: '04:45 PM', patient: 'Wanda Charamba',   proc: 'Cerclage Procedure',   room: 'Theatre 1',  status: 'preop' },
 ];
 
 const notices = [
@@ -141,7 +141,7 @@ export default function DoctorDashboard({ user, onNavigate }) {
                 {user?.name?.split(' ').map(n => n[0]).join('').slice(0,2)}
               </div>
               <div>
-                <div style={{ fontWeight: 700, fontSize: '1.05rem' }}>{user?.name}</div>
+                <div style={{ fontWeight: 700, fontSize: '1.05rem' }}>Matron Dube</div>
                 <div style={{ fontSize: '0.78rem', opacity: 0.75 }}>On Call: 08:00 – 20:00</div>
               </div>
             </div>
