@@ -25,6 +25,9 @@ export const NAV_CONFIG = {
     { key: 'fault',        label: 'Fault Reports',        icon: 'AlertTriangle',   path: '/fault-reports' },
     { key: 'birth',        label: 'Birth Records',        icon: 'Baby',            path: '/birth-records' },
     { key: 'attendance',   label: 'Attendance Records',   icon: 'ClipboardList',   path: '/attendance' },
+    { key: 'dispensary',   label: 'Dispensary Management',   icon: 'BriefcaseMedical',   path: '/dispensary' },
+    { key: 'blood',   label: 'Blood Bank Management',   icon: 'Droplets',   path: '/blood-bank' },
+
   ],
   patient: [
     { key: 'dashboard',    label: 'Dashboard',            icon: 'LayoutDashboard', path: '' },
