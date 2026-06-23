@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import AppShell from '../../components/AppShell';
 import PlaceholderPage from '../../components/PlaceholderPage';
 import BirthRecordsDashboard from './BirthRecordsDashboard';
+import BirthRecordsInfo from './BirthRecordsInfo';
+import SearchRecords from './SearchRecords';
+import Notifications from './Notifications';
 
 export default function BirthRecordsView({ user, onLogout }) {
   const [page, setPage] = useState('dashboard');
@@ -16,11 +19,11 @@ export default function BirthRecordsView({ user, onLogout }) {
       case 'dashboard':
         return <BirthRecordsDashboard user={user} onNavigate={setPage} />;
       case 'search':
-        return <PlaceholderPage title="Search Records" icon="Search" />;
+        return <SearchRecords title="Search Records" icon="Search" />;
       case 'notifications':
-        return <PlaceholderPage title="Notifications" icon="Bell" />;
+        return <Notifications title="Notifications" icon="Bell" />;
       case 'myinfo':
-        return <PlaceholderPage title="My Information" icon="UserCircle" />;
+        return <BirthRecordsInfo title="My Information" icon="UserCircle" />;
       case 'help':
         return <PlaceholderPage title="Help Center" icon="HelpCircle" />;
       default:

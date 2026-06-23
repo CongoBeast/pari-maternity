@@ -32,9 +32,9 @@ const notices = [
 ];
 
 const recentRecords = [
-  { id: '#BR-2024-001', parent: 'Eleanor Thompson', dob: 'Mar 08, 2024', status: 'verified' },
-  { id: '#BR-2024-002', parent: 'Jameson Wright',   dob: 'Mar 09, 2024', status: 'inprogress' },
-  { id: '#BR-2024-003', parent: 'Sia Roberts',      dob: 'Mar 09, 2024', status: 'amendment' },
+  { id: '#BR-2024-001', parent: 'Tendai Moyo',        dob: 'Mar 08, 2024', status: 'verified' },
+  { id: '#BR-2024-002', parent: 'Chipo Zvobgo',       dob: 'Mar 09, 2024', status: 'inprogress' },
+  { id: '#BR-2024-003', parent: 'Rudo Mafuka',        dob: 'Mar 09, 2024', status: 'amendment' },
 ];
 
 function StatusBadge({ s }) {
