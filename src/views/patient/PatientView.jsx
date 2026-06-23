@@ -5,6 +5,8 @@ import PatientDashboard from './PatientDashboard';
 import Prescriptions from './Prescriptions';
 import PatientInfo from './PatientInfo';
 import Scans from './Scans';
+import PatientHistory from './PatientHistory';
+import PatientNotifications from './PatientNofitications';
 
 export default function PatientView({ user, onLogout }) {
   const [page, setPage] = useState('dashboard');
@@ -21,9 +23,9 @@ export default function PatientView({ user, onLogout }) {
       case 'prescriptions':
         return <Prescriptions title="Prescriptions" icon="Pill" />;
       case 'notifications':
-        return <PlaceholderPage title="Notifications" icon="Bell" />;
+        return <PatientNotifications title="Notifications" icon="Bell" />;
       case 'history':
-        return <PlaceholderPage title="Medical History" icon="History" />;
+        return <PatientHistory title="Medical History" icon="History" />;
       case 'scans':
         return <Scans title="Scans" icon="ScanLine" />;
       case 'myinfo':

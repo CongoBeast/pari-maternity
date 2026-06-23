@@ -46,16 +46,16 @@ export default function PatientInfo({ user, onUpdate }) {
   const [editing, setEditing] = useState(false);
 
   // Seed from the logged-in user where possible, fall back to demo data.
-  const [form, setForm] = useState({
-    fullName: user?.name || 'Amara Okafor',
+const [form, setForm] = useState({
+    fullName: user?.name || 'Tendai Moyo',
     patientId: 'PT-2024-08817',
     dob: '1994-03-18',
     bloodType: 'O+',
-    phone: '+1 (415) 555-0182',
-    email: user?.email || 'amara.okafor@example.com',
-    address: '274 Birchwood Lane, Apt 5B, San Francisco, CA 94110',
-    emergencyName: 'David Okafor (Spouse)',
-    emergencyPhone: '+1 (415) 555-0199',
+    phone: '+263 77 123 4567',
+    email: user?.email || 'tendai.moyo@example.com',
+    address: '123 Samora Machel Avenue, Harare, Zimbabwe',
+    emergencyName: 'Tafadzwa Moyo (Spouse)',
+    emergencyPhone: '+263 71 234 5678',
     allergies: 'Penicillin, Shellfish',
     conditions: 'Mild gestational anemia',
     obHistory: 'G2 P1 — one prior full-term delivery (2021)',
