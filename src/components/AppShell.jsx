@@ -29,7 +29,7 @@ export default function AppShell({ role, user, activePage, onNavigate, children 
       {/* Sidebar */}
       <aside className={`pm-sidebar${sidebarOpen ? ' open' : ''}`}>
         <div className="pm-sidebar-brand">
-          <div className="brand-name">Mbuya Nehanda Maternity</div>
+          <div className="brand-name">Vista Medical Systems</div>
           <div className="brand-sub">Hospital Management System</div>
         </div>
 

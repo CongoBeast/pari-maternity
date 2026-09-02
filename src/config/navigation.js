@@ -1,5 +1,5 @@
 /**
- * PARI MATERNITY — Navigation Configuration
+ * VISTA MEDICAL SYSTEMS — Navigation Configuration
  * ──────────────────────────────────────────
  * To add a new tab to any role: add an entry to the relevant array.
  * Each entry: { key, label, icon (lucide name string), path }
@@ -29,6 +29,10 @@ export const NAV_CONFIG = {
     { key: 'blood',   label: 'Blood Bank Management',   icon: 'Droplets',   path: '/blood-bank' },
     { key: 'suppliers',   label: 'Supplier Management',   icon: 'Van',   path: '/suppliers' },
     { key: 'insurance',   label: 'Insurance Management',   icon: 'WalletCards',   path: '/insurance' },
+    { key: 'billing', label: 'Patient Billing', icon: 'Receipt', path: '/billing' },
+    { key: 'emergency', label: 'Emergency Room', icon: 'Siren', path: '/emergency' },
+    { key: 'assets', label: 'Medical Equipment', icon: 'MonitorCog', path: '/assets' },
+    { key: 'queue', label: 'Consultation Queue', icon: 'Ticket', path: '/queue' },
 
   ],
   patient: [

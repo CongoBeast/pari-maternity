@@ -1,0 +1,2 @@
+import React,{useState} from 'react';
+export default function EmergencyManagementPage(){const [cases,setCases]=useState([]);return <div className="pm-card"><h2>Emergency Department</h2><button className="btn btn-danger" onClick={()=>setCases([{id:Date.now(),name:'Emergency arrival',triage:'High'},...cases])}>Register Emergency</button>{cases.map(c=><div key={c.id} className="p-2">{c.name} - {c.triage}</div>)}</div>}

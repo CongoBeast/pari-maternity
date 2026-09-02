@@ -1,5 +1,5 @@
 /**
- * PARI MATERNITY — Theme Configuration
+ * VISTA MEDICAL SYSTEMS — Theme Configuration
  * ─────────────────────────────────────
  * Each role gets its own blue-family shade.
  * To change a palette, edit ONLY this file.

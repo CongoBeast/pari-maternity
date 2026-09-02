@@ -14,6 +14,10 @@ import DispensaryManagementPage from './DispensaryManagementPage';
 import BloodBankPage from './BloodBankPage';
 import SuppliersPage from './SuppliersPage';
 import InsuranceClaimsPage from './InsuranceClaimsPage';
+import BillingManagementPage from './BillingManagementPage';
+import EmergencyManagementPage from './EmergencyManagementPage';
+import MedicalAssetsPage from './MedicalAssetsPage';
+import QueueManagementPage from './QueueManagementPage';
 
 
 export default function AdminView({ user, onLogout }) {
@@ -51,6 +55,10 @@ export default function AdminView({ user, onLogout }) {
         return <SuppliersPage title="Manage Suppliers" icon="Van"/>;
       case 'insurance':
         return <InsuranceClaimsPage title="Insurance Management" icon="WalletCards"/>;
+      case 'billing': return <BillingManagementPage />;
+      case 'emergency': return <EmergencyManagementPage />;
+      case 'assets': return <MedicalAssetsPage />;
+      case 'queue': return <QueueManagementPage />;
       case 'attendance':
         return <AttendanceManagementPage title="Attendance Records" icon="ClipboardList" />;
       case 'myinfo':

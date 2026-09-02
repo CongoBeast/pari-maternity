@@ -1,0 +1,2 @@
+import React,{useState} from 'react';
+export default function MedicalAssetsPage(){const [items,setItems]=useState([{name:'Ultrasound Machine',status:'Available'}]);return <div className="pm-card"><h2>Medical Equipment Lifecycle</h2><button className="btn btn-primary" onClick={()=>setItems([...items,{name:'New Equipment',status:'Inspection'}])}>Add Asset</button>{items.map((x,i)=><div key={i}>{x.name} - {x.status}</div>)}</div>}

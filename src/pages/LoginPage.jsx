@@ -68,7 +68,7 @@ export default function LoginPage({ onLogin }) {
             <Heart size={26} color="#fff" />
           </div>
           <h1 style={{ color: '#fff', fontFamily: "'Roboto Condensed', sans-serif", fontSize: '1.8rem', fontWeight: 700, margin: 0 }}>
-            Pari Maternity
+            Vista Medical Systems
           </h1>
           <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.875rem', margin: '6px 0 0' }}>
             Hospital Management System
