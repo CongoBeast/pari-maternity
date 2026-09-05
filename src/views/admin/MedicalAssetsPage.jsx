@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { MonitorCog, Plus, Eye, Wrench, ShieldCheck, PowerOff, CalendarClock } from 'lucide-react';
+import { Monitor, Plus, Eye, Wrench, ShieldCheck, PowerOff, CalendarClock } from 'lucide-react';
 import {
   PageHeader, MetricCard, StatusBadge, SearchFilter, Modal, FormField,
   DetailGrid, DetailItem, Toast, EmptyState, money
@@ -50,13 +50,13 @@ export default function MedicalAssetsPage(){
   };
 
   return <>
-    <PageHeader icon="MonitorCog" title="Medical Equipment Lifecycle" subtitle="Control the full asset lifecycle from acquisition and commissioning through maintenance, movement and retirement." actions={<>
+    <PageHeader icon="Monitor" title="Medical Equipment Lifecycle" subtitle="Control the full asset lifecycle from acquisition and commissioning through maintenance, movement and retirement." actions={<>
       <button className="pm-btn pm-btn-outline"><CalendarClock size={15}/> Maintenance calendar</button>
       <button className="pm-btn pm-btn-primary" onClick={()=>setShowNew(true)}><Plus size={15}/> Add equipment</button>
     </>}/>
 
     <div className="ops-metrics">
-      <MetricCard icon="MonitorCog" label="Registered assets" value={assets.length} note={`Book value ${money(assets.reduce((s,a)=>s+a.purchase,0))}`}/>
+      <MetricCard icon="Monitor" label="Registered assets" value={assets.length} note={`Book value ${money(assets.reduce((s,a)=>s+a.purchase,0))}`}/>
       <MetricCard icon="ShieldCheck" label="Ready for use" value={assets.filter(a=>['In service','Available'].includes(a.status)).length} note="Clinically available" tone="success"/>
       <MetricCard icon="Wrench" label="Maintenance due" value={assets.filter(a=>a.status==='Maintenance due').length} note="Service action required" tone="warning"/>
       <MetricCard icon="AlertTriangle" label="Restricted / inspection" value={assets.filter(a=>a.status==='Inspection').length} note="Not cleared for routine use" tone="danger"/>
@@ -80,7 +80,7 @@ export default function MedicalAssetsPage(){
       </div>
     </div>
 
-    <Modal open={showNew} onClose={()=>setShowNew(false)} title="Register medical equipment" subtitle="Create the asset record before acceptance inspection and commissioning." icon="MonitorCog" size="lg" footer={<><button className="pm-btn pm-btn-ghost" onClick={()=>setShowNew(false)}>Cancel</button><button className="pm-btn pm-btn-primary" onClick={saveAsset}>Add equipment</button></>}>
+    <Modal open={showNew} onClose={()=>setShowNew(false)} title="Register medical equipment" subtitle="Create the asset record before acceptance inspection and commissioning." icon="Monitor" size="lg" footer={<><button className="pm-btn pm-btn-ghost" onClick={()=>setShowNew(false)}>Cancel</button><button className="pm-btn pm-btn-primary" onClick={saveAsset}>Add equipment</button></>}>
       <div className="ops-form-grid">
         <FormField label="Asset tag"><input value={form.assetTag} onChange={e=>setForm({...form,assetTag:e.target.value})} placeholder="VMS-XXX-000"/></FormField>
         <FormField label="Equipment name"><input value={form.name} onChange={e=>setForm({...form,name:e.target.value})} placeholder="e.g. Ventilator"/></FormField>
@@ -98,9 +98,9 @@ export default function MedicalAssetsPage(){
       </div>
     </Modal>
 
-    <Modal open={!!selected} onClose={()=>setSelected(null)} title={selected?.name||''} subtitle={`${selected?.assetTag||''} · ${selected?.id||''}`} icon="MonitorCog" size="lg" footer={<button className="pm-btn pm-btn-ghost" onClick={()=>setSelected(null)}>Close</button>}>
+    <Modal open={!!selected} onClose={()=>setSelected(null)} title={selected?.name||''} subtitle={`${selected?.assetTag||''} · ${selected?.id||''}`} icon="Monitor" size="lg" footer={<button className="pm-btn pm-btn-ghost" onClick={()=>setSelected(null)}>Close</button>}>
       {selected&&<>
-        <div className="ops-callout"><MonitorCog size={18}/><div><strong>{selected.location}</strong><span>{selected.notes}</span></div></div>
+        <div className="ops-callout"><Monitor size={18}/><div><strong>{selected.location}</strong><span>{selected.notes}</span></div></div>
         <DetailGrid>
           <DetailItem label="Lifecycle status" value={<StatusBadge status={selected.status}/>}/><DetailItem label="Condition" value={selected.condition}/>
           <DetailItem label="Manufacturer / model" value={`${selected.manufacturer} ${selected.model}`}/><DetailItem label="Serial number" value={selected.serial}/>
@@ -110,7 +110,7 @@ export default function MedicalAssetsPage(){
         </DetailGrid>
         <div className="ops-section"><div className="ops-section-title"><h4>Asset actions</h4></div><div className="ops-inline-actions">
           <button className="pm-btn pm-btn-outline" onClick={()=>setShowService(true)}><Wrench size={14}/> Record maintenance</button>
-          <button className="pm-btn pm-btn-outline" onClick={()=>patch({location:'Biomedical Workshop',status:'Inspection'},'Asset moved to Biomedical Workshop for inspection')}><MonitorCog size={14}/> Send to workshop</button>
+          <button className="pm-btn pm-btn-outline" onClick={()=>patch({location:'Biomedical Workshop',status:'Inspection'},'Asset moved to Biomedical Workshop for inspection')}><Monitor size={14}/> Send to workshop</button>
           <button className="pm-btn pm-btn-outline" onClick={()=>patch({status:'Available'},'Asset marked available for allocation')}><ShieldCheck size={14}/> Mark available</button>
           <button className="pm-btn pm-btn-ghost" style={{color:'var(--pm-danger)'}} onClick={()=>patch({status:'Retired',location:'Decommissioned Assets Store'},'Asset retired from clinical service')}><PowerOff size={14}/> Retire asset</button>
         </div></div>
