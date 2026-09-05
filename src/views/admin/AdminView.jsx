@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../../styles/adminOperations.css';
 import AppShell from '../../components/AppShell';
 import PlaceholderPage from '../../components/PlaceholderPage';
 import AdminDashboard from './AdminDashboard';
@@ -15,7 +16,6 @@ import BloodBankPage from './BloodBankPage';
 import SuppliersPage from './SuppliersPage';
 import InsuranceClaimsPage from './InsuranceClaimsPage';
 import BillingManagementPage from './BillingManagementPage';
-import EmergencyManagementPage from './EmergencyManagementPage';
 import MedicalAssetsPage from './MedicalAssetsPage';
 import QueueManagementPage from './QueueManagementPage';
 import GeneralAdmissionsPage from './GeneralAdmissionsPage';
@@ -60,7 +60,6 @@ export default function AdminView({ user, onLogout }) {
       case 'insurance':
         return <InsuranceClaimsPage title="Insurance Management" icon="WalletCards"/>;
       case 'billing': return <BillingManagementPage />;
-      case 'emergency': return <EmergencyManagementPage />;
       case 'assets': return <MedicalAssetsPage />;
       case 'queue': return <QueueManagementPage />;
       case 'attendance':
