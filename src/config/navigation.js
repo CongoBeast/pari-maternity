@@ -16,6 +16,8 @@ export const NAV_CONFIG = {
     { key: 'attendance',   label: 'Attendance Records',   icon: 'ClipboardList',   path: '/attendance' },
   ],
   admin: [
+    { key: 'admissions', label: 'General Admissions', icon: 'ClipboardPlus', path: '/admissions' },
+
     { key: 'dashboard',    label: 'Dashboard',            icon: 'LayoutDashboard', path: '' },
     { key: 'staff',        label: 'Staff',                icon: 'UserCog',         path: '/staff' },
     { key: 'management',   label: 'Management',           icon: 'Building2',       path: '/management' },
@@ -35,6 +37,13 @@ export const NAV_CONFIG = {
     { key: 'queue', label: 'Consultation Queue', icon: 'Ticket', path: '/queue' },
 
   ],
+  finance: [
+    { key: 'dashboard', label: 'Dashboard', icon: 'LayoutDashboard', path: '' },
+    { key: 'accounting', label: 'Accounting', icon: 'Calculator', path: '/accounting' },
+    { key: 'billing', label: 'Patient Billing', icon: 'Receipt', path: '/billing' },
+    { key: 'suppliers', label: 'Suppliers & RFQs', icon: 'Truck', path: '/suppliers' },
+    { key: 'insurance', label: 'Insurance', icon: 'ShieldCheck', path: '/insurance' },
+  ],
   patient: [
     { key: 'dashboard',    label: 'Dashboard',            icon: 'LayoutDashboard', path: '' },
     { key: 'prescriptions',label: 'Prescriptions',        icon: 'Pill',            path: '/prescriptions' },
@@ -42,11 +51,13 @@ export const NAV_CONFIG = {
     { key: 'history',      label: 'History',              icon: 'History',         path: '/history' },
     { key: 'scans',        label: 'Scans',                icon: 'ScanLine',        path: '/scans' },
     { key: 'myinfo',       label: 'My Information',       icon: 'UserCircle',      path: '/my-info' },
+    { key: 'account', label: 'Account & Checkout', icon: 'CreditCard', path: '/account' },
   ],
   birthRecord: [
     { key: 'dashboard',    label: 'Dashboard',            icon: 'LayoutDashboard', path: '' },
     { key: 'search',       label: 'Search Records',       icon: 'Search',          path: '/search' },
     { key: 'notifications',label: 'Notifications',        icon: 'Bell',            path: '/notifications' },
     { key: 'myinfo',       label: 'My Information',       icon: 'UserCircle',      path: '/my-info' },
+    { key: 'account', label: 'Account & Checkout', icon: 'CreditCard', path: '/account' },
   ],
 };

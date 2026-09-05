@@ -18,6 +18,8 @@ import BillingManagementPage from './BillingManagementPage';
 import EmergencyManagementPage from './EmergencyManagementPage';
 import MedicalAssetsPage from './MedicalAssetsPage';
 import QueueManagementPage from './QueueManagementPage';
+import GeneralAdmissionsPage from './GeneralAdmissionsPage';
+import ERManagementPage from './ERManagementPage';
 
 
 export default function AdminView({ user, onLogout }) {
@@ -31,6 +33,8 @@ export default function AdminView({ user, onLogout }) {
 
   const renderPage = () => {
     switch (page) {
+      case 'admissions': return <GeneralAdmissionsPage />;
+      case 'emergency': return <ERManagementPage />;
       case 'dashboard':
         return <AdminDashboard user={user} onNavigate={setPage} />;
       case 'staff':

@@ -1,3 +1,4 @@
+import PatientAccountPage from './PatientAccountPage';
 import React, { useState } from 'react';
 import AppShell from '../../components/AppShell';
 import PlaceholderPage from '../../components/PlaceholderPage';
@@ -18,6 +19,7 @@ export default function PatientView({ user, onLogout }) {
 
   const renderPage = () => {
     switch (page) {
+      case 'account': return <PatientAccountPage />;
       case 'dashboard':
         return <PatientDashboard user={user} onNavigate={setPage} />;
       case 'prescriptions':

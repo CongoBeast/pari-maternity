@@ -193,13 +193,14 @@ export const ROLE_THEMES = {
   },
 };
 
+export const ROLE_THEMES_FINANCE_NOTE = {};
 export const USERS = [
   {
     id: 'doctor',
     role: 'doctor',
     name: 'Dr. Sarah Mpande',
     title: 'Senior Obstetrician',
-    email: 'sarah.mpande@pari.health',
+    email: 'sarah.mpande@vistamedical.co.zw',
     password: 'doctor123',
     avatar: null,
   },
@@ -208,7 +209,7 @@ export const USERS = [
     role: 'admin',
     name: 'Grace Mugwagwa',
     title: 'Hospital Administrator',
-    email: 'grace.mugwagwa@pari.health',
+    email: 'grace.mugwagwa@vistamedical.co.zw',
     password: 'admin123',
     avatar: null,
   },
@@ -226,8 +227,17 @@ export const USERS = [
     role: 'birthRecord',
     name: 'Jabu Khumalo',
     title: 'Birth Records Administrator',
-    email: 'jabu.khumalo@pari.health',
+    email: 'jabu.khumalo@vistamedical.co.zw',
     password: 'birth123',
     avatar: null,
   },
+  {
+    id: 'finance',
+    role: 'finance',
+    name: 'Finance Manager',
+    title: 'Finance & Accounts Officer',
+    email: 'finance@vistamedical.co.zw',
+    password: 'finance123',
+    avatar: null,
+  }
 ];

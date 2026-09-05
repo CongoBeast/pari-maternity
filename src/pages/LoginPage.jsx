@@ -108,7 +108,7 @@ export default function LoginPage({ onLogin }) {
                 type="email"
                 value={email}
                 onChange={e => setEmail(e.target.value)}
-                placeholder="you@pari.health"
+                placeholder="you@vistamedical.co.zw"
                 required
                 style={{
                   width: '100%', padding: '10px 14px',

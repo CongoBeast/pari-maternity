@@ -8,7 +8,7 @@ export function useTheme(role) {
   });
 
   const applyTheme = useCallback((dark, roleName) => {
-    const theme = ROLE_THEMES[roleName];
+    const theme = ROLE_THEMES[roleName] || ROLE_THEMES.admin;
     if (!theme) return;
     const palette = dark ? theme.dark : theme.light;
     const root = document.documentElement;

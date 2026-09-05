@@ -7,6 +7,7 @@ import DoctorView       from './views/doctor/DoctorView';
 import AdminView        from './views/admin/AdminView';
 import PatientView      from './views/patient/PatientView';
 import BirthRecordsView from './views/birthrecords/BirthRecordsView';
+import FinanceView from './views/finance/FinanceView';
 
 const SESSION_KEY = 'pm-session';
 
@@ -44,6 +45,8 @@ export default function App() {
       return <PatientView user={user} onLogout={handleLogout} />;
     case 'birthRecord':
       return <BirthRecordsView user={user} onLogout={handleLogout} />;
+    case 'finance':
+      return <FinanceView user={user} onLogout={handleLogout} />;
     default:
       return <LoginPage onLogin={handleLogin} />;
   }
